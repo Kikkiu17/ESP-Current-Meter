@@ -171,7 +171,7 @@ void loop()
 
         float received_current = atof(tx_message);
 
-        uint32_t pwr = received_current * 220;
+        uint32_t pwr = received_current * 220;  // non molto accurato, si può aggiungere un sensore di tensione
         scr.checkWake(pwr, last_watts);
 
         scr.writePower(pwr, received_current, last_watts, last_current);
